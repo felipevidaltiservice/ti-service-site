@@ -11,6 +11,53 @@ body {
     line-height: 1.6;
 }
 
+/* Estilos gerais para telas grandes */
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Ajustes para telas pequenas (móveis) */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  header {
+    font-size: 18px;
+  }
+
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+  }
+}
+
+/* Exemplo de flexbox para navegação */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
+
+
 /* Texto vermelho para destaques */
 .red-text {
     color: rgb(145, 0, 0);
@@ -498,4 +545,5 @@ footer a:hover {
         font-size: 2rem;
     }
 }
+
 
