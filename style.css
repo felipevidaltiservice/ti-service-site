@@ -553,6 +553,61 @@ footer a:hover {
     font-size: 0.9rem;
   }
 }
+/* Estilos para dispositivos móveis */
+@media (max-width: 768px) {
+  /* Ajuste do cabeçalho */
+  header {
+    font-size: 18px;
+    padding: 1rem;
+  }
+
+  /* Navegação */
+  .navbar {
+    display: block;
+    text-align: center;
+  }
+
+  .navbar a {
+    display: block;
+    padding: 10px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1.5rem;
+  }
+
+  /* Formulário de contato */
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+  }
+
+  /* Rodapé */
+  footer {
+    padding: 1.5rem;
+  }
+}
+
+/* Estilos para telas muito pequenas */
+@media (max-width: 480px) {
+  /* Ajuste do cabeçalho */
+  header {
+    font-size: 16px;
+  }
+
+  /* Cards */
+  .card {
+    padding: 1rem;
+  }
+
+  /* Formulário de contato */
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.9rem;
+  }
+}
+
 
 
 
