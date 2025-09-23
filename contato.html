@@ -1,43 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contato - TI Service</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI Service - Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> <!-- link do CSS separado -->
 </head>
 <body>
- <header>
-  <div class="logo">
-    <a href="https://www.tiservice.com.br" target="_blank">
-      <img src="https://raw.githubusercontent.com/fvidalinfra-cell/ti-service-site/refs/heads/main/Logo%202.1.jpg" alt="Logo TI Service">
-    </a>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="contato.html">Contato</a></li>
-    </ul>
-  </nav>
+<header class="navbar">
+    <div class="navbar-left">
+        <img src="https://raw.githubusercontent.com/fvidalinfra-cell/ti-service-site/refs/heads/main/Logo.png" alt="TI Service Logo" />
+    </div>
+
+  <!-- Texto centralizado na tela -->
+    <div class="header-text">
+        <h1>TI SERVICE</h1>
+        <p>SUA MELHOR OPÇÃO EM TECNOLOGIA DA INFORMAÇÃO!</p>
+    </div>
+
+  <!-- Navegação à direita -->
+    <nav class="navbar-nav">
+        <a href="index.html#about">Sobre</a>
+        <a href="index.html#services">Serviços</a>
+        <a href="index.html#clients">Clientes</a>
+        <a href="index.html#differentials">Diferenciais</a>
+    </nav>
 </header>
-  <main>
-    <section>
-      <h1>Fale Conosco</h1>
-      <p>Entre em contato através do formulário abaixo:</p>
+<main>
+  <section id="faleConosco" class="contact-section">
 
-      <form>
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" required>
+    <div class="contact-content">
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required>
+      <!-- BLOCO 1: Contato (esquerda) -->
+      <div class="contact-box info-side">
+        <h2><span class="red-text">Contato</span></h2>
+        <p>Estamos prontos para atender você. Entre em contato pelos canais abaixo e fale com a nossa equipe:</p>        <ul>
+          <li><strong>Email:</strong> <a href="mailto:contato@tiservice.com.br">contato@tiservice.com.br</a></li>
+          <li>
+            <strong>WhatsApp:</strong>
+            <a href="https://wa.me/5521972173674" target="_blank">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width:20px; vertical-align:middle; margin-right:5px;">
+              (21) 97217-3674
+            </a>
+          </li>
+          <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/ti-service-br" target="_blank">TI Service</a></li>
+        </ul>
+      </div>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+      <!-- BLOCO 2: Fale Conosco (formulário à direita) -->
+      <div class="contact-box form-side">
+        <h2><span class="red-text">Fale</span> Conosco</h2>
+        <form class="contact-form">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required>
 
-        <button type="submit">Enviar</button>
-      </form>
-    </section>
-  </main>
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+
+    </div>
+
+  </section>
+</main>
+
+
+
+
 </body>
 </html>
