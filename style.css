@@ -27,6 +27,33 @@ header.navbar {
     flex-wrap: wrap;
 }
 
+/* Primeira Imagem */
+.imagem1 {
+  display: flex;              /* Flex para facilitar o alinhamento */
+  justify-content: center;    /* Centraliza na horizontal */
+  align-items: center;        /* Centraliza na vertical (se tiver altura definida) */
+  margin: 20px auto;          /* Dá espaço e centraliza o bloco */
+  max-width: 100%;            /* Garante que não passe da largura da tela */
+}
+
+.imagem1 img {
+  max-width: 100%;   /* Responsiva: nunca maior que o container */
+  height: auto;      /* Mantém a proporção */
+  border-radius: 12px; /* Bordas arredondadas (opcional) */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra opcional */
+}
+
+.imagem1 img {
+  max-width: 40%;   /* desktop */
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .imagem1 img {
+    max-width: 80%; /* celular */
+  }
+}
+
 /* Sobre a Empresa - Missão, Visão e Valores */
 .mission-vision-values {
     display: grid;
