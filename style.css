@@ -73,15 +73,17 @@ header.navbar {
     margin: 0;
 }
 
-/* Navegação Desktop (VERSÃO FINAL E ROBUSTA) */
+/* ==========================================================================
+   Navegação Desktop (VERSÃO FINAL E ROBUSTA) 
+   ========================================================================== */
 .navbar-nav {
     display: flex;
-    flex-direction: row; /* Força o alinhamento em linha */
+    flex-direction: row; /* Itens alinhados horizontalmente */
     align-items: center;  /* Alinha os itens verticalmente */
-    gap: 1.5rem;
-    list-style: none; /* Garante que não haja "bolinhas" de lista */
-    padding: 0;
+    gap: 1.5rem; /* Espaçamento entre os itens */
+    list-style: none; /* Remove os pontos de lista */
     margin: 0;
+    padding: 0;
 }
 
 .navbar-nav a {
@@ -90,14 +92,16 @@ header.navbar {
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
-    white-space: nowrap; /* Evita que o texto do link quebre a linha */
+    white-space: nowrap; /* Impede quebra de linha nos itens */
 }
 
 .navbar-nav a:hover {
     color: #c00000;
 }
 
-/* Menu Dropdown (Hamburguer) para Mobile */
+/* ==========================================================================
+   Menu Dropdown (Hamburguer) para Mobile
+   ========================================================================== */
 .navbar-right {
     margin-left: auto;
     display: flex;
