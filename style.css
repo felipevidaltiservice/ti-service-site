@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Estilos Gerais e Reset
+   ========================================================================== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,283 +12,8 @@ body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-}
-
-/* Texto vermelho para destaques */
-.red-text {
-    color: rgb(145, 0, 0);
-}
-
-/* Cabeçalho */
-header.navbar {
-    background-color: #ffffff;
-    color: white;
-    padding: 1rem 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-/* Primeira Imagem */
-.imagem1 {
-  display: flex;              /* Flex para facilitar o alinhamento */
-  justify-content: center;    /* Centraliza na horizontal */
-  align-items: center;        /* Centraliza na vertical (se tiver altura definida) */
-  margin: 20px auto;          /* Dá espaço e centraliza o bloco */
-  max-width: 100%;            /* Garante que não passe da largura da tela */
-}
-
-.imagem1 img {
-  max-width: 100%;   /* Responsiva: nunca maior que o container */
-  height: auto;      /* Mantém a proporção */
-  border-radius: 12px; /* Bordas arredondadas (opcional) */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Sombra opcional */
-}
-
-.imagem1 img {
-  max-width: 40%;   /* desktop */
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .imagem1 img {
-    max-width: 80%; /* celular */
-  }
-}
-
-/* Sobre a Empresa - Missão, Visão e Valores */
-.mission-vision-values {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.mission-vision-values .item {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.mission-vision-values .item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.mission-vision-values .item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #960000;
-}
-
-.mission-vision-values .item p {
-    font-size: 1rem;
-    color: #333;
-    line-height: 1.6;
-}
-
-.mission-vision-values .item ul {
-    padding-left: 1.2rem;
-    list-style: disc;
-}
-
-.mission-vision-values .item li {
-    margin-bottom: 0.8rem;
-    font-size: 1rem;
-    line-height: 1.5;
-    text-align: center;
-}
-
-/* Responsivo: coluna única no mobile, 3 colunas no desktop */
-@media (min-width: 768px) {
-    .mission-vision-values {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-
-/* Melhor visualização da seção "Valores" */
-.mission-vision-values .item ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.mission-vision-values .item ul li {
-    margin-bottom: 1.2rem;
-    padding-left: 1.5rem;
-    position: relative;
-    text-align: justify;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-.mission-vision-values .item ul li::before {
-    content: "•";
-    color: #960000;
-    font-size: 1.2rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-    line-height: 1.4;
-}
-
-.mission-vision-values .item h3 {
-    font-size: 1.4rem;
-    color: #960000;
-    margin-bottom: 1.5rem;
-    text-align: center;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 0.5rem;
-}
-
-
-/* Container da esquerda (logo) */
-.navbar-left img {
-    height: 90px;
-}
-
-/* Container do texto central */
-.header-text {
-    flex: 1;
-    text-align: center;
-}
-
-/* Título */
-.header-text h1 {
-    color: rgb(204, 2, 2);
-    font-size: 2rem;
-    margin: 0;
-}
-
-/* Subtítulo */
-.header-text p {
-    color: rgb(204, 2, 2);
-    font-size: 1rem;
-    margin: 0;
-}
-
-/* Navegação à direita (menu sutil com texto vermelho e sem fundo) */
-.navbar-nav {
-    display: flex;
-    gap: 0.5rem;
-    background: transparent;
-}
-
-.navbar-nav a {
-    color: #960000; /* Vermelho escuro, como no título */
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav a:hover {
-    color: #c00000; /* Um vermelho um pouco mais claro no hover */
-}
-/* Cabeçalho Final*/
-
-/* Dropdown Menu (novo) */
-.navbar-right {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropbtn {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 25px;
-  padding: 8px 16px;
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.dropbtn:hover {
-  background-color: #f0f0f0;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 45px;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  padding: 10px 15px;
-  text-decoration: none;
-  display: block;
-  color: #333;
-}
-
-.dropdown-content a:hover {
-  background-color: #f5f5f5;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* Ícone do menu (3 linhas) */
-.menu-icon {
-  width: 18px;
-  height: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.menu-icon span {
-  display: block;
-  height: 2px;
-  background: black;
-  border-radius: 2px;
-}
-
-
-/* Menu */
-nav {
-    background-color: #c70707;
-    padding: 0.8rem;
-    text-align: center;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-nav a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Seções */
-section {
-    padding: 4rem 1rem;
-    max-width: 1200px;
-    margin: auto;
+    /* Adiciona espaço no topo para o menu fixo. Ajuste a altura se necessário. */
+    padding-top: 100px;
 }
 
 h2 {
@@ -303,8 +31,165 @@ li {
     margin-bottom: 0.5rem;
 }
 
-/* Cards */
-.services, .differentials, .clients {
+.red-text {
+    color: #960000;
+}
+
+/* ==========================================================================
+   Cabeçalho e Navegação (Header)
+   ========================================================================== */
+header.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    
+    /* Regras para fixar o menu */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar-left img {
+    height: 90px;
+}
+
+.header-text {
+    flex: 1;
+    text-align: center;
+}
+
+.header-text h1 {
+    color: rgb(204, 2, 2);
+    font-size: 2rem;
+    margin: 0;
+}
+
+.header-text p {
+    color: rgb(204, 2, 2);
+    font-size: 1rem;
+    margin: 0;
+}
+
+/* Navegação Desktop */
+.navbar-nav {
+    display: flex;
+    gap: 0.5rem;
+    background: transparent;
+}
+
+.navbar-nav a {
+    color: #960000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav a:hover {
+    color: #c00000;
+}
+
+/* Menu Dropdown (Hamburguer) para Mobile */
+.navbar-right {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: none; /* Escondido por padrão, aparece em telas menores */
+}
+
+.dropbtn {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropbtn:hover {
+    background-color: #f0f0f0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 45px;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    color: #333;
+}
+
+.dropdown-content a:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.menu-icon {
+    width: 18px;
+    height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    background: black;
+    border-radius: 2px;
+}
+
+/* ==========================================================================
+   Seções Gerais e Cards
+   ========================================================================== */
+section {
+    padding: 4rem 1rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.imagem1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 100%;
+}
+
+.imagem1 img {
+    max-width: 40%; /* Tamanho para desktop */
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.services, .differentials, .clients, .mission-vision-values {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -330,59 +215,76 @@ li {
     margin-bottom: 1rem;
 }
 
-.clients img {
+.clients .card img {
     max-width: 150px;
     max-height: 80px;
     object-fit: contain;
 }
 
-/* Ícone específico do card de vendas */
-.card i.fa-cart-shopping {
-    color: #ad0000; /* destaca em vermelho */
+/* ==========================================================================
+   Seção "Sobre" - Missão, Visão e Valores
+   ========================================================================== */
+.mission-vision-values {
+    margin-top: 2rem;
 }
 
-/* Seção de Contato */
-.contact-section {
-    background: #ffffff;
-    padding: 4rem 1rem;
-    max-width: 800px;
-    margin: 0 auto;
+.mission-vision-values .item {
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
 }
 
-.contact-section h2 {
+.mission-vision-values .item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.mission-vision-values .item h3 {
+    font-size: 1.4rem;
     color: #960000;
-    margin-bottom: 1rem;
-}
-
-.contact-section p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     text-align: center;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 0.5rem;
 }
 
-.contact-section ul {
-    list-style-type: none;
-    padding: 0;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-.contact-section li {
-    margin-bottom: 0.8rem;
+.mission-vision-values .item p {
     font-size: 1rem;
+    color: #333;
+    line-height: 1.6;
 }
 
-.contact-section a {
+.mission-vision-values .item ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mission-vision-values .item li {
+    margin-bottom: 1.2rem;
+    padding-left: 1.5rem;
+    position: relative;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.mission-vision-values .item li::before {
+    content: "•";
     color: #960000;
-    text-decoration: none;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 1.4;
 }
 
-.contact-section a:hover {
-    text-decoration: underline;
-}
-
-/* Seção de contato com layout em colunas */
+/* ==========================================================================
+   Seção de Contato
+   ========================================================================== */
 .contact-section {
     background: #ffffff;
     padding: 4rem 1rem;
@@ -392,17 +294,6 @@ li {
     box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.contact-section h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 2rem;
-}
-
-.contact-section h2 .red-text {
-    color: #960000;
-}
-
-/* Layout lado a lado */
 .contact-content {
     display: flex;
     flex-wrap: wrap;
@@ -410,7 +301,34 @@ li {
     justify-content: space-between;
 }
 
-/* Formulário */
+.contact-box {
+    flex: 1;
+    min-width: 300px;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.info-side ul {
+    list-style: none;
+    padding: 0;
+}
+
+.info-side li {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.info-side a {
+    color: #960000;
+    text-decoration: none;
+}
+
+.info-side a:hover {
+    text-decoration: underline;
+}
+
 .contact-form {
     flex: 1;
     min-width: 300px;
@@ -454,119 +372,9 @@ li {
     background-color: #c00000;
 }
 
-/* Informações de contato/Fale conosco- Inicio */
-
-/* Espaçamento entre header e seção principal */
-main {
-    margin-top: 3rem;
-}
-
-/* Container das duas colunas */
-.contact-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
-    justify-content: space-between;
-}
-
-/* Destaque para cada box */
-.contact-box {
-    flex: 1;
-    min-width: 300px;
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-/* Títulos */
-.contact-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-/* Destaque em vermelho */
-.red-text {
-    color: #960000;
-}
-
-/* Informações de contato */
-.info-side ul {
-    list-style: none;
-    padding: 0;
-}
-
-.info-side li {
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-
-.info-side a {
-    color: #960000;
-    text-decoration: none;
-}
-
-.info-side a:hover {
-    text-decoration: underline;
-}
-
-/* Formulário */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.contact-form label {
-    font-weight: 600;
-    color: #333;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-}
-
-.contact-form button {
-    background-color: #960000;
-    color: white;
-    border: none;
-    padding: 0.9rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #c00000;
-}
-
-/* Responsivo */
-@media(max-width: 768px) {
-    .contact-content {
-        flex-direction: column;
-    }
-
-    .contact-box {
-        width: 100%;
-    }
-
-    .contact-box h2 {
-        text-align: center;
-    }
-}
-
-
-/* Informações de contato/Fale conosco - Fim */
-
-
-/* Rodapé */
+/* ==========================================================================
+   Rodapé (Footer)
+   ========================================================================== */
 footer {
     background-color: #ad0000;
     color: white;
@@ -584,30 +392,51 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsividade */
-@media(max-width: 600px) {
-    header h1 {
-        font-size: 2rem;
+/* ==========================================================================
+   Responsividade (Media Queries)
+   ========================================================================== */
+
+/* Telas médias e menores (Tablets e Celulares) */
+@media (max-width: 768px) {
+    /* Esconde o menu de navegação normal e mostra o dropdown (hamburguer) */
+    .navbar-nav {
+        display: none;
     }
 
+    .dropdown {
+        display: block;
+    }
+
+    /* Ajusta o tamanho da imagem principal em celulares */
+    .imagem1 img {
+        max-width: 80%;
+    }
+
+    /* Layout da seção "Sobre" para 1 coluna */
+    .mission-vision-values {
+        grid-template-columns: 1fr;
+    }
+
+    /* Layout da seção de contato para 1 coluna */
+    .contact-content {
+        flex-direction: column;
+    }
+    .contact-box {
+        width: 100%;
+    }
+    .contact-box h2 {
+        text-align: center;
+    }
+}
+
+/* Telas pequenas (Celulares) */
+@media (max-width: 600px) {
+    header.navbar h1 {
+        font-size: 2rem;
+    }
     .card i {
         font-size: 2rem;
     }
 }
 
-/* Esconde dropdown no desktop */
-.dropdown {
-  display: none;
-}
-
-/* Quando a tela for menor que 768px */
-@media (max-width: 768px) {
-  .navbar-nav {
-    display: none; /* Esconde o menu normal */
-  }
-
-  .dropdown {
-    display: block; /* Mostra o menu hamburguer */
-  }
-}
 
