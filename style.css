@@ -66,13 +66,13 @@ header.navbar {
 }
 
 .header-text h1 {
-    color: rgb(204, 2, 2);
+    color: #ffffff;
     font-size: 2rem;
     margin: 0;
 }
 
 .header-text p {
-    color: rgb(204, 2, 2);
+    color: #ffffff;
     font-size: 1rem;
     margin: 0;
 }
@@ -438,5 +438,6 @@ footer a:hover {
         font-size: 2rem;
     }
 }
+
 
 
