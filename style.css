@@ -39,18 +39,21 @@ li {
    Cabeçalho e Navegação (Header)
    ========================================================================== */
 header.navbar {
+    /* --- Propriedades de Layout (Flexbox) --- */
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
-    
-    /* Regras para fixar o menu */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    justify-content: space-between; /* Distribui o espaço: logo na esquerda, menu na direita */
+    flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
+
+    /* --- Propriedades de Posicionamento Fixo --- */
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
+
+    /* --- Propriedades Visuais --- */
+    padding: 1rem 2rem;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
@@ -438,5 +441,6 @@ footer a:hover {
         font-size: 2rem;
     }
 }
+
 
 
