@@ -12,8 +12,7 @@ body {
     background-color: #f5f7fa;
     color: #333;
     line-height: 1.6;
-    /* Adiciona espaço no topo para o menu fixo. Ajuste a altura se necessário. */
-    padding-top: 100px;
+    padding-top: 100px; /* Espaço para o menu fixo */
 }
 
 h2 {
@@ -39,20 +38,15 @@ li {
    Cabeçalho e Navegação (Header)
    ========================================================================== */
 header.navbar {
-    /* --- Propriedades de Layout (Flexbox) --- */
     display: flex;
-    align-items: center; /* Alinha verticalmente os itens no centro */
-    justify-content: space-between; /* Distribui o espaço: logo na esquerda, menu na direita */
-    flex-wrap: wrap; /* Permite que os itens quebrem a linha se não houver espaço */
-
-    /* --- Propriedades de Posicionamento Fixo --- */
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-
-    /* --- Propriedades Visuais --- */
     padding: 1rem 2rem;
     background-color: #ffffff;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -79,13 +73,15 @@ header.navbar {
     margin: 0;
 }
 
-/* Navegação Desktop (VERSÃO CORRETA E ÚNICA) */
+/* Navegação Desktop (VERSÃO FINAL E ROBUSTA) */
 .navbar-nav {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row; /* Força o alinhamento em linha */
+    align-items: center;  /* Alinha os itens verticalmente */
     gap: 1.5rem;
-    background: transparent;
+    list-style: none; /* Garante que não haja "bolinhas" de lista */
+    padding: 0;
+    margin: 0;
 }
 
 .navbar-nav a {
@@ -94,6 +90,7 @@ header.navbar {
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
+    white-space: nowrap; /* Evita que o texto do link quebre a linha */
 }
 
 .navbar-nav a:hover {
@@ -109,7 +106,7 @@ header.navbar {
 
 .dropdown {
     position: relative;
-    display: none; /* Escondido por padrão, aparece em telas menores */
+    display: none;
 }
 
 .dropbtn {
@@ -188,7 +185,7 @@ section {
 }
 
 .imagem1 img {
-    max-width: 40%; /* Tamanho para desktop */
+    max-width: 40%;
     height: auto;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -401,28 +398,19 @@ footer a:hover {
    Responsividade (Media Queries)
    ========================================================================== */
 
-/* Telas médias e menores (Tablets e Celulares) */
 @media (max-width: 768px) {
-    /* Esconde o menu de navegação normal e mostra o dropdown (hamburguer) */
     .navbar-nav {
         display: none;
     }
-
     .dropdown {
         display: block;
     }
-
-    /* Ajusta o tamanho da imagem principal em celulares */
     .imagem1 img {
         max-width: 80%;
     }
-
-    /* Layout da seção "Sobre" para 1 coluna */
     .mission-vision-values {
         grid-template-columns: 1fr;
     }
-
-    /* Layout da seção de contato para 1 coluna */
     .contact-content {
         flex-direction: column;
     }
@@ -434,7 +422,6 @@ footer a:hover {
     }
 }
 
-/* Telas pequenas (Celulares) */
 @media (max-width: 600px) {
     header.navbar h1 {
         font-size: 2rem;
