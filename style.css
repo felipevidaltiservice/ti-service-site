@@ -58,15 +58,6 @@ header.navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-/* Navegação Desktop */
-.navbar-nav {
-    display: flex;
-    flex-direction: row; /* Garante o alinhamento em linha (lado a lado) */
-    align-items: center; /* Alinha os links verticalmente no centro da barra */
-    gap: 1.5rem; /* Aumentei um pouco o espaçamento entre os links */
-    background: transparent;
-}
-
 .navbar-left img {
     height: 90px;
 }
@@ -88,10 +79,12 @@ header.navbar {
     margin: 0;
 }
 
-/* Navegação Desktop */
+/* Navegação Desktop (VERSÃO CORRETA E ÚNICA) */
 .navbar-nav {
     display: flex;
-    gap: 0.5rem;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
     background: transparent;
 }
 
@@ -450,6 +443,3 @@ footer a:hover {
         font-size: 2rem;
     }
 }
-
-
-
