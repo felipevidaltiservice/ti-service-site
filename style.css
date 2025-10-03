@@ -58,6 +58,14 @@ header.navbar {
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
+/* Navegação Desktop */
+.navbar-nav {
+    display: flex;
+    flex-direction: row; /* Garante o alinhamento em linha (lado a lado) */
+    align-items: center; /* Alinha os links verticalmente no centro da barra */
+    gap: 1.5rem; /* Aumentei um pouco o espaçamento entre os links */
+    background: transparent;
+}
 
 .navbar-left img {
     height: 90px;
@@ -442,5 +450,6 @@ footer a:hover {
         font-size: 2rem;
     }
 }
+
 
 
